@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Revenue Opportunities MCAPS_GitHub"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "dae85187-d2e3-4a22-920c-4be430dd1f34"
+  }
+}
