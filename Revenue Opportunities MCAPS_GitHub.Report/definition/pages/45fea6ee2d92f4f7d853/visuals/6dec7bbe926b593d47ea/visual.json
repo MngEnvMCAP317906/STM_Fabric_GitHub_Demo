@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "6dec7bbe926b593d47ea",
+  "position": {
+    "x": 712,
+    "y": 392,
+    "z": 2,
+    "height": 160,
+    "width": 192,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Sheet1"
+                    }
+                  },
+                  "Property": "category"
+                }
+              },
+              "queryRef": "Sheet1.category",
+              "nativeQueryRef": "category"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sheet1"
+                        }
+                      },
+                      "Property": "page visit"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Sheet1.page visit)",
+              "nativeQueryRef": "page visit"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

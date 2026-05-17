@@ -18,7 +18,7 @@ queryGroup 'Functions and parameters'
 
 	annotation PBI_QueryGroupOrder = 2
 
-annotation PBI_QueryOrder = ["Accounts","Dates","Opportunities","Partners","Products","SalesStages","Sales","fxResultGenerator","fxDateGenerator","Start date","Language code"]
+annotation PBI_QueryOrder = ["Accounts","Dates","Opportunities","Partners","Products","SalesStages","Sales","fxResultGenerator","fxDateGenerator","Start date","Language code","Sheet1"]
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
@@ -31,6 +31,7 @@ ref table Products
 ref table SalesStages
 ref table Sales
 ref table Dates
+ref table Sheet1
 
 ref cultureInfo en-US
 
