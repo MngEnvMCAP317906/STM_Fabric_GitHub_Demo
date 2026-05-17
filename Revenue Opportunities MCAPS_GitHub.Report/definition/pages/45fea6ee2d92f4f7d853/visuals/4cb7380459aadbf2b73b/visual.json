@@ -1,0 +1,69 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "4cb7380459aadbf2b73b",
+  "position": {
+    "x": 128,
+    "y": 56,
+    "z": 0,
+    "height": 512,
+    "width": 376,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Opportunities"
+                    }
+                  },
+                  "Property": "Name"
+                }
+              },
+              "queryRef": "Opportunities.Name",
+              "nativeQueryRef": "Name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Opportunities"
+                    }
+                  },
+                  "Property": "Opportunity Size"
+                }
+              },
+              "queryRef": "Opportunities.Opportunity Size",
+              "nativeQueryRef": "Opportunity Size"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SalesStages"
+                    }
+                  },
+                  "Property": "Probability"
+                }
+              },
+              "queryRef": "SalesStages.Probability",
+              "nativeQueryRef": "Probability"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

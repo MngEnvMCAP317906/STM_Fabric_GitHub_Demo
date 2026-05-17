@@ -1,0 +1,33 @@
+table Sheet1
+	lineageTag: 87000d77-8635-47da-bba7-74972f975eb6
+
+	column category
+		dataType: string
+		lineageTag: 728f97cf-d511-49c9-a936-6c18de4248cd
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'page visit'
+		dataType: int64
+		formatString: 0
+		lineageTag: d071b3eb-aa51-4231-8693-51daa9575fdb
+		summarizeBy: sum
+		sourceColumn: page visit
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Sheet1 = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\sonaltarve\OneDrive - Microsoft\cnn_sheet.xlsx"), null, true),
+				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"category", type text}, {"page visit", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
